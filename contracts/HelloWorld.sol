@@ -19,5 +19,11 @@ contract HelloWorld {
     function greet() public pure returns (string memory) {
         return "Hello, welcome to the Blockchain!";
     }
+
+    // 🔄 Append text to the current message
+    function appendToMessage(string memory _suffix) public {
+        message = string(abi.encodePacked(message, _suffix));
+    }
 }
+
 
